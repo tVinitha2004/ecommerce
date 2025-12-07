@@ -1,0 +1,47 @@
+ <div class="container">
+    <div class="row justify-content-center align-items-center vh-100">
+      <div class="col-md-7">
+        <div class="card shadow-sm rounded">
+          <div class="card-body p-4">
+            <h3 class="card-title text-center mb-4">Login Form</h3>
+            <form action="" method="POST">
+                {% csrf_token %}
+              <div class="mb-3">
+                <label for="username" class="form-label">Email</label>
+                <input type="text" class="form-control rounded-2" name="username" id="username" placeholder="Enter email"autocomplete="off">
+              </div>
+      
+
+              <div class="mb-3 position-relative">
+  <label for="password" class="form-label">Password</label>
+  <input type="password" class="form-control rounded-2" name="password" id="password" placeholder="Enter password" autocomplete="new-password">
+
+<span id="togglePassword" onclick="togglePassword()" style="position: absolute; right: 15px; top: 38px; cursor: pointer;">
+  <i class="bi bi-eye"></i>
+</span>
+
+
+</div>  
+      <p class="text-danger">{{error}}</p>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-block rounded-2">Login</button>
+        </div>
+            </form>
+
+            <div class="text-center mt-3">
+              <a href="{% url 'password_reset' %}" class="text-muted small text-decoration-none">
+                Forgot Password?
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!-- Right Side - Image -->
+      <div class="col-md-5 bg-dark d-flex align-items-center justify-content-center p-0">
+        <div class="card shadow-sm rounded bg-dark">
+        <img src="https://amohaa.com/assets/images/slider/home_Ai.png" 
+             alt="Robot" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    </div>
